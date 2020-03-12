@@ -47,5 +47,13 @@ Described [here](http://wiki.innfos.com/wiki/en/index.html#!pages/QDD%20Lite-NE3
 
 There are reasons for brushless motors and the like. Here is a small collection of information:
 
-- [Power of brushless motors]()
-- [ESC for BLDC with Arduino - HowToMechatronics](https://youtu.be/uOQk8SJso6Q?t=157)
+- [Torque comparison servo - brushless](https://youtu.be/qTVohNscEmM?t=12) by Skyentific, Nov. 2018
+- [Power of brushless motors](https://youtu.be/8AziOykde30?t=701) Skyentific, video
+- [Calculator rpm power voltage BLDC](https://www.ecalc.ch/torquecalc.php) from ecalc.ch
+- [Cycloidal 3D printed actuator](https://hackaday.io/project/157812-3d-printed-robot-actuator) by Paul Gould
+- [Reason for brushless + encoder](https://youtu.be/p4ltHDpxrbI?t=430) by Marco Reps, video
+- [ESC for BLDC with Arduino](https://youtu.be/uOQk8SJso6Q?t=157) by HowToMechatronics
+- [Review QDD Lite-NE30-36](https://youtu.be/0sgR_RaxYu4) by Skyentific, video. For the high current they add a big capacitor: [video at 2:20](https://youtu.be/0sgR_RaxYu4?t=140)
+- [Lite NE30-36 from inside video](https://youtu.be/UazlY0nfZKw)
+- [Inverse kinematics applied to 5DoF](https://youtu.be/2YTb6gWo40Q) in Basel, stepper and belts
+
