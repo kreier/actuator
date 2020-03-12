@@ -24,6 +24,7 @@ There is a plethoria of connectors available. The idea of just one connector for
 - [VH3.96](https://www.thegioiic.com/products/bo-dau-noi-vh3-96-4-chan-duc-cai) 250 VAC 7A
 - [8-pin 5557-5559 4.2mm Wire Connector](https://www.thegioiic.com/products/dau-noi-day-duc-5557-5559-4-2mm-8-chan)
 - [Molex 5.08](https://www.thegioiic.com/products/dau-noi-day-duc-5-08mm-4pin) (old HDD in computers) 350V 10A
+- [XT60](https://www.servocity.com/male-xt60-connector) just for power 60A in bullet style Nylon connector
 
 ### Terminal pin function
 
@@ -41,3 +42,10 @@ There is a plethoria of connectors available. The idea of just one connector for
 | 8     | CAN-H   | gray  | CAN communication high signal line |
 
 Described [here](http://wiki.innfos.com/wiki/en/index.html#!pages/QDD%20Lite-NE30-36_v1_8.md) as well. If it works, why not copy?
+
+## Background information
+
+There are reasons for brushless motors and the like. Here is a small collection of information:
+
+- [Power of brushless motors]()
+- [ESC for BLDC with Arduino - HowToMechatronics](https://youtu.be/uOQk8SJso6Q?t=157)
