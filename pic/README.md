@@ -2,6 +2,8 @@
 
 Just a folder to collect all the pictures used in this project
 
+![All components](all_components.jpg)
+![Exploded view actuator](exploded.jpg)
 ![connector](connector.jpg)
 ![NE30](NE30-36.jpg)
 ![specifications](Lite-NE30-36.jpg)
