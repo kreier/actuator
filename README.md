@@ -1,6 +1,6 @@
 # Robot actuator module
 
-This work is inspired by the INNFOS [SCA QDD Lite-NE30-36](http://wiki.innfos.com/wiki/en/index.html#!pages/QDD%20Lite-NE30-36_v1_8.md) robot actuator. The goal is a general purpose robot actuator with the features:
+This work is inspired by the INNFOS [SCA QDD Lite-NE30-36](http://wiki.innfos.com/wiki/en/index.html#!pages/QDD%20Lite-NE30-36_v1_8.md) robot actuator and [John Lauers Chilipepr robot actuator](https://github.com/chilipeppr/robot-actuator-esp32-v8). The goal is a general purpose robot actuator with the features:
 
 - planetary gearbox for high torque (harmonic drive?)
 - brushless motor for high power in small space
@@ -10,6 +10,30 @@ This work is inspired by the INNFOS [SCA QDD Lite-NE30-36](http://wiki.innfos.co
 It won't be as compact as the industrial, but maybe available and in the price range of the [kickstarter campain](https://www.kickstarter.com/projects/1383636492/the-smallest-servomotor-robotic-arm) ($99 for one Lite-NE30-36 actuator). And I'm not sure if it is possible. INNFOS has 70 people full time in R&D for their actuators. That's not easy to compete in a weekend project.
 
 ## Information
+
+The components for INNFOS and ChiliPepr indicate the different sections that need to be designed or equipped:
+
+![Exploded view INNFOS](pic/exploded.jpg)
+
+We need:
+
+1. Gearbox with reduction ratio 1:40
+2. Brushless motor BLDC
+3. Controller board with motor driverand encoder
+4. Power and data interface, temperature sensor and status LED 
+
+Additionally we need:
+
+5. Power supply 24V - 42V
+6. ECB Ethernet to CAN bridge, bus logic
+7. Emergency Power Off
+8. Communication protocol for CAN bus
+
+No. 2, 5 and 7 can be bought. 8 can be [copied from INNFOS](http://wiki.innfos.com/wiki/en/index.html#!pages/CAN_Communication_Protocol.md). Together it looks like:
+
+![All components needed](pic/all_components.jpg)
+
+And this setup has __no input__ yet to start "auto learning mode" or the like. A raspberry with touchscreen would do the trick. Combining the power supply, ECB and Rasberry Pi in housing leaves only 2 components: robot and controller. Maybe common in 5 years, but today ...
 
 ![NE3--36](pic/NE30-36.jpg)
 
@@ -42,6 +66,31 @@ There is a plethoria of connectors available. The idea of just one connector for
 | 8     | CAN-H   | gray  | CAN communication high signal line |
 
 Described [here](http://wiki.innfos.com/wiki/en/index.html#!pages/QDD%20Lite-NE30-36_v1_8.md) as well. If it works, why not copy?
+
+### Chilipepr approach with John Lauer
+
+He only uses 24 Volt and exports them trough 2 sliders (1 Ohm?) in the bearing of each actuator. Less wiring and theoretically 360 degrees, since the ESP32s are connected wirelessly - but I think that wireless is not reliable enough. That's more a gimmick idea and introduces avoidable causes of error, together with the power supply chain for high currents.
+
+## Gearbox
+
+### Harmonic drive
+
+The harmonic drive should be expensive and hard to create. With all the 3D printers out there one would assume some working examples exists. Yet Thingiverse is a testimony for failure form maschine building students. Examples:
+
+- [Working example with flexible filament](https://www.thingiverse.com/thing:1966551) from bartding, 2016
+- [Good looking example that needs NEMA 23](https://www.thingiverse.com/thing:2735297) from Trollox, 2017
+- [Only for fidget](https://www.thingiverse.com/thing:3181288) by Hoshiimiki, 2018
+- [Strain Wave Gear](https://www.thingiverse.com/thing:3644830) by tanmayburde, 2019 - not with NEMA17, PLA not stiff enough
+
+### Planetary Gear Box
+
+Used by many others. Chilipepr used the updated design from 
+
+## Controller board
+
+For the ESP32 there is a [D1 Mini Board](https://www.aliexpress.com/item/4000650379995.html?spm=a2g0o.productlist.0.0.5f42586aifMlh3&algo_pvid=f3bdcfc9-ecc9-4dc3-8140-84f1ccf06fae&algo_expid=f3bdcfc9-ecc9-4dc3-8140-84f1ccf06fae-18&btsid=0ab6f82415841196558331203e3206&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_) so only one board has to be designed to stack on top of it - like Chilipeprs approach. Has micro-USB for programming.
+
+![D1 Mini ESP32](pic/d1_mini.png)
 
 ## Background information
 
