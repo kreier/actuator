@@ -1,5 +1,51 @@
 # Robot actuator module
 
+The actuator or servomotor consists of 3 main parts:
+
+1. [Gearbox](gearbox) with reduction ratio 33:1
+2. A brushless motor BLDC
+3. [Driver board](driverboard) with encoder, temperature sensor, ESC driver, CPU for with interface and LED
+
+![Exploded view INNFOS](pic/exploded.jpg)
+
+To be operational we need 3 more things: 
+
+- A power supply 24V 20A 480W with emergency power off
+- [ECB Ethernet to CAN bridge](ecb), bus logic
+- A communication protocol for the CAN bus
+
+Together it looks like this:
+
+![All components needed](pic/all_components.jpg)
+
+While the BLDC, power supply and emergency power of can be bought, the ECB has to be designed. The communication protocol can be taken from INNFOS. A suitable gearbox is currently not available. As this project evolves that might change. Here are the designed parts:
+
+## 1. Gearbox
+
+2 stage epicyclic gearbox with sun 1M10T, plantes 1M19T and ring 1M48T for a reduction ratio of 5.8:1 from 1 +  48/10. Staged this gives 33:1.
+
+## 2. Brushless motor
+
+I investigated the power per kilogram and ...
+
+## 3. Driver board
+
+I looked at the design of John Lauer and while I like the ESP32 I will start to use the blue pill since it natively supports CAN, has 32bit as well and can be updated with micro-USB.
+
+## 4. Power supply
+
+Not much to write. Got it for $10 in Ho Chi Minh City. The emergency power of was another $5 from Aliexpress.
+
+## 5. ECB Ethernet to CAN bridge
+
+This design will take some time.
+
+## 6. Communication protocol for CAN bus
+
+Details follw
+
+## Background
+
 This work is inspired by the INNFOS [SCA QDD Lite-NE30-36](http://wiki.innfos.com/wiki/en/index.html#!pages/QDD%20Lite-NE30-36_v1_8.md) robot actuator and [John Lauers Chilipepr robot actuator](https://github.com/chilipeppr/robot-actuator-esp32-v8). The goal is a general purpose robot actuator with the features:
 
 - planetary gearbox for high torque (harmonic drive?)
@@ -106,3 +152,8 @@ There are reasons for brushless motors and the like. Here is a small collection 
 - [Lite NE30-36 from inside video](https://youtu.be/UazlY0nfZKw)
 - [Inverse kinematics applied to 5DoF](https://youtu.be/2YTb6gWo40Q) in Basel, stepper and belts
 
+## History
+
+> 2020/03/19
+
+The first gears where designed in Fusion 360 with the spurn gears tool.
