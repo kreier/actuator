@@ -28,7 +28,7 @@ Printed bearings are not very good, as I observed myself with my [EEZYbotARM MK2
 
 Parameters of some common bearings:
 
-... this table follows. its a table on my desktop already ...
+![Parameter bearings](pic/bearings.jpg)
 
 > 2020/03/19
 
