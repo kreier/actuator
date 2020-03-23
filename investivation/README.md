@@ -4,7 +4,9 @@ Generally my solution tends towards a [Servomotor](https://en.wikipedia.org/wiki
 
 ## 1) Commercial Servos
 
-Servos are used in model airplanes and simple robot arms for up to $1000. Here are the advantages and disadvantages
+Servos are used in model airplanes and simple robot arms for up to $1000. Here are the advantages and disadvantages.
+
+![Parameter INNFOS](QDD-NE30-36.jpg)
 
 ## 2) Reducer - cycloidal drive, harmonic drive and epicyclic gearing
 
