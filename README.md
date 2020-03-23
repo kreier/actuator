@@ -22,7 +22,7 @@ While the BLDC, power supply and emergency power of can be bought, the ECB has t
 
 ## 1. Gearbox
 
-2 stage epicyclic gearbox with sun 1M10T, plantes 1M19T and ring 1M48T for a reduction ratio of 5.8:1 from 1 +  48/10. Staged this gives 33:1.
+2 stage epicyclic gearbox with sun 1M10T, plantes 1M19T and ring 1M48T for a reduction ratio of 5.8:1 from 1 +  48/10. Staged this gives 33:1. More details in [the gearbox folder](gearbox/)
 
 ## 2. Brushless motor
 
@@ -31,6 +31,8 @@ I investigated the power per kilogram and ...
 ## 3. Driver board
 
 I looked at the design of John Lauer and while I like the ESP32 I will start to use the blue pill since it natively supports CAN, has 32bit as well and can be updated with micro-USB.
+
+The encoder should be integrated on this board. In many cases this is done with a magnetic encoder like AS5600 (12bit - $5) or AS5048A (14bit - $13). Combined with a gearbox of 33.6:1 reduction (5 bit) one gets a resolution of 19 bit like the NE30-36. Compared to a backlash of 18 Arc min (18/60 of a degree) that's 360/524288 = 0.04 Arc min or 2.47 Arc sec. The encoder is 436x more precise than the gearbox can achieve.
 
 ## 4. Power supply
 
