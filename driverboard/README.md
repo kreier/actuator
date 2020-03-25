@@ -1,22 +1,21 @@
-# Robot actuator module
+# Driver board
 
-The actuator or servomotor consists of 3 main parts:
+It has several components
+- Molex [3.0mm 3046-2*xx 43045-2*04](https://www.thegioiic.com/products/dau-noi-3-0mm-8pin-cong-han-pcb) connector for power 250V 7A and CAN bus
+- STM32F103C8T6 electronics driver with micro-USB
+- ESC self made with inspiration from Great Scott!
+- Temperature sensor TM56
+- Magnetic encoder AS5600 12bit - with gearbox 33:1 (5bit) we get 17 bit or 131072 steps per revolution
+- 17 bit relates to 0.00275 degrees, thats 0.16 Arc Minutes or 10 Arc seconds
+- step down converter 24V to 5V for 32bit cpu
+- LED 5050 for feedback
+- something ...
 
-1. [Gearbox](gearbox) with reduction ratio 33:1
-2. A brushless motor BLDC
-3. [Driver board](driverboard) with encoder, temperature sensor, ESC driver, CPU for with interface and LED
-
-![Exploded view INNFOS](pic/exploded.jpg)
-
-To be operational we need 3 more things: 
-
-- A power supply 24V 20A 480W with emergency power off
-- [ECB Ethernet to CAN bridge](ecb), bus logic
-- A communication protocol for the CAN bus
+![Exploded view INNFOS](../pic/exploded.jpg)
 
 Together it looks like this:
 
-![All components needed](pic/all_components.jpg)
+![All components needed](../pic/all_components.jpg)
 
 While the BLDC, power supply and emergency power of can be bought, the ECB has to be designed. The communication protocol can be taken from INNFOS. A suitable gearbox is currently not available. As this project evolves that might change. Here are the designed parts:
 
