@@ -60,7 +60,7 @@ It won't be as compact as the industrial, but maybe available and in the price r
 
 The components for INNFOS and ChiliPepr indicate the different sections that need to be designed or equipped:
 
-![Exploded view INNFOS](pic/exploded.jpg)
+![Exploded view INNFOS](../pic/exploded.jpg)
 
 We need:
 
@@ -78,11 +78,11 @@ Additionally we need:
 
 No. 2, 5 and 7 can be bought. 8 can be [copied from INNFOS](http://wiki.innfos.com/wiki/en/index.html#!pages/CAN_Communication_Protocol.md). Together it looks like:
 
-![All components needed](pic/all_components.jpg)
+![All components needed](../pic/all_components.jpg)
 
 And this setup has __no input__ yet to start "auto learning mode" or the like. A raspberry with touchscreen would do the trick. Combining the power supply, ECB and Rasberry Pi in housing leaves only 2 components: robot and controller. Maybe common in 5 years, but today ...
 
-![NE3--36](pic/NE30-36.jpg)
+![NE3--36](../pic/NE30-36.jpg)
 
 ## Connector
 
@@ -99,7 +99,7 @@ There is a plethoria of connectors available. The idea of just one connector for
 
 ### Terminal pin function
 
-<img src="pic/connector.jpg" width="40%">
+<img src="../pic/connector.jpg" width="40%">
 
 | Label | Signal  | color | Features                           |
 |-------|---------|-------|------------------------------------|
@@ -137,7 +137,7 @@ Used by many others. Chilipepr used the updated design from
 
 For the ESP32 there is a [D1 Mini Board](https://www.aliexpress.com/item/4000650379995.html?spm=a2g0o.productlist.0.0.5f42586aifMlh3&algo_pvid=f3bdcfc9-ecc9-4dc3-8140-84f1ccf06fae&algo_expid=f3bdcfc9-ecc9-4dc3-8140-84f1ccf06fae-18&btsid=0ab6f82415841196558331203e3206&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_) so only one board has to be designed to stack on top of it - like Chilipeprs approach. Has micro-USB for programming.
 
-![D1 Mini ESP32](pic/d1_mini.png)
+![D1 Mini ESP32](../pic/d1_mini.png)
 
 ## Background information
 
@@ -158,3 +158,11 @@ There are reasons for brushless motors and the like. Here is a small collection 
 > 2020/03/19
 
 The first gears where designed in Fusion 360 with the spurn gears tool.
+
+> 2020/04/10
+
+A video was published on March 25 this year how to design a custom PCB with components and a STM32F4 CPU:
+
+[https://youtu.be/t5phi3nT8OU](https://youtu.be/t5phi3nT8OU)
+
+I might use this tutorial and inspiration
